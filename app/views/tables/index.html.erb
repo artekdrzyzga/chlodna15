@@ -14,6 +14,8 @@
 
   <div class="well well-lg">
     <ul>
+      <li>Imie i nazwisko: <%= current_user.name %></li>
+      <li>Telefon: <%= current_user.tel %></li>
       <li>Login count: <%= current_user.login_count %></li>
       <li>Failed login count: <%= current_user.failed_login_count %></li>
       <li>Last request: <%= current_user.last_request_at %></li>
