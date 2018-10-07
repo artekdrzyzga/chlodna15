@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :users
+    resources :tables
+    root to: 'users#index'
+  end
+  
   resources :users, only: [:new, :create]
   resources :user_sessions, only: [:create, :destroy]
   resources :tables
