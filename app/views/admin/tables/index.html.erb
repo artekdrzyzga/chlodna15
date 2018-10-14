@@ -1,2 +1,34 @@
-<h1>Admin::Tables#index</h1>
-<p>Find me in app/views/admin/tables/index.html.erb</p>
+<<h1>Admin::Tables#indexnew</h1>
+
+
+<%= link_to new_admin_table_path, class: "btn btn-success" do %>
+  <span class="fa fa-plus fa-spin"></span> Dodaj nowy stolik
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Numer stolika</th>
+      <th>Nazwa stolika</th>
+      <th>Ilosc siedzen</th>
+
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tables.each do |table| %>
+      <tr>
+        <td><%= table.id %></td>
+        <td><%= table.name %></td>
+        <td><%= table.seats %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+    
+        <td>
+        
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

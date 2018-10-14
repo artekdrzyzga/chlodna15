@@ -69,3 +69,8 @@ gem "twitter-bootstrap-rails"
 gem 'simple_form'
 
 gem 'authlogic'
+
+gem 'bootstrap-sass'
+gem 'bootstrap-datepicker-rails'
+
+gem "rails-erd"

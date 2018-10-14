@@ -1,0 +1,33 @@
+<h1>Admin::Reservations#index</h1>
+<p>Find me in app/views/admin/reservations/index.html.erb</p>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Numer rezerwacji</th>
+      <th> Klient</th>
+      <th>Data</th>
+      <th>Ilosc gosci</th>
+
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reservations.each do |r| %>
+      <tr>
+        <td><%= r.id %></td>
+        <td><%= r.user.name%></td>
+        <td><%= r.date %></td>
+        <td><%= r.seats %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+    
+        <td>
+        
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

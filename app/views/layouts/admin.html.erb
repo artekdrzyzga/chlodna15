@@ -22,6 +22,7 @@
 
           <li <% if params[:controller] == "admin/users" %>class="active"<% end %>><%= link_to "Urzytkownicy", admin_users_path %></li>
           <li <% if params[:controller] == "admin/tables" %>class="active"<% end %>><%= link_to "Stoliki", admin_tables_path %></li>
+          <li <% if params[:controller] == "admin/reservations" %>class="active"<% end %>><%= link_to "Rezerwacje", admin_reservations_path %></li>
          
 
       </ul>

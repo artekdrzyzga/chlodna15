@@ -1,0 +1,11 @@
+<h1>Reservations#new</h1>
+
+<%= simple_form_for  @reservation do |f| %>
+  <%= f.input :date %>
+  <%= f.input :seats %>
+ 
+  
+
+  <%= f.submit class: "btn btn-success" %>
+<% end %>
+

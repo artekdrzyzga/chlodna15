@@ -14,3 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-datepicker
+
+$('#sandbox-container div').datepicker({
+    keyboardNavigation: false,
+    forceParse: false
+});
