@@ -1,2 +1,15 @@
-<h1>Admin::Reservations#edit</h1>
-<p>Find me in app/views/admin/reservations/edit.html.erb</p>
+
+
+<h1> Numer rezerwacji : <%=@reservation.id %></h1>
+<h2>Data: <%= @reservation.date%> </h2>
+<h2>Urzytkownik:<%=@reservation.user.name %></h2>
+
+ 
+ 
+  <%= simple_form_for [:admin, @reservation] do |f| %>
+    <%= f.association :table, as: :select, prompt: nil %>
+    <%= button_tag class: "btn btn-success btn-lg" do %>
+      Zapisz i przejdź dalej
+      <span class="fa fa-step-forward"></span>
+    <% end %>
+  <% end %>

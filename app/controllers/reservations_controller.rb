@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
-  def index
-  end
+    def index
+    end
 
  
     def new
@@ -11,17 +11,21 @@ class ReservationsController < ApplicationController
       @reservation= Reservation.new(reservation_params)
       
       @reservation.user_id =  current_user.id
-     
+      @reservation.table_id = 1
+      
       if @reservation.save
-        redirect_to reservations_new_path, notice: "Pomyślnie dodano produkt."
+        redirect_to root_path, notice: "Pomyślnie dodano produkt."
       else
         render action: :new
       end
     end
 
 
-  def edit
-  end
+  
+    def edit
+   
+    end
+  
 
   def delete
   end

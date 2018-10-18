@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'reservations/index'
-  get 'reservations/new'
-  get 'reservations/edit'
-  get 'reservations/delete'
+
   namespace :admin do
     resources :users
     resources :tables
