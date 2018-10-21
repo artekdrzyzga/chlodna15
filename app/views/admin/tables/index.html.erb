@@ -1,9 +1,5 @@
-<h1>Admin::Tables#indexnew</h1>
 
 
-<%= link_to new_admin_table_path, class: "btn btn-success" do %>
-  <span class="fa fa-plus fa-spin"></span> Dodaj nowy stolik
-<% end %>
 
 <table class="table table-striped">
   <thead>
@@ -11,6 +7,7 @@
       <th>Numer stolika</th>
       <th>Nazwa stolika</th>
       <th>Ilosc siedzen</th>
+      <th>Actions</th>
       
 
 
@@ -23,6 +20,8 @@
         <td><%= table.id %></td>
         <td><%= table.name %></td>
         <td><%= table.seats %></td>
+         <td><%= link_to "Edycja", edit_admin_table_path(table), class: "btn btn-default btn-xs" %></td>
+    
         <td><%=  %></td>
         <td><%=  %></td>
     
@@ -33,3 +32,7 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to new_admin_table_path, class: "btn btn-success" do %>
+  <span class="fa fa-plus fa-spin"></span> Dodaj nowy stolik
+<% end %>

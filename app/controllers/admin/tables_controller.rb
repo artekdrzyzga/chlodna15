@@ -18,7 +18,18 @@ class Admin::TablesController < Admin::BaseController
   
   
   def edit
+    @table = Table.find(params[:id])
   end
+
+  def update
+    @table = Table.find(params[:id])
+    if @table.update_attributes(table_params)
+      redirect_to admin_tables_path, notice: "Pomyślnie uaktualniono stolik"
+    else
+      #render action: :edit
+    end
+  end
+
 
   def delete
   end
