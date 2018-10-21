@@ -19,9 +19,7 @@ class Admin::ReservationsController < Admin::BaseController
    
     def reservation_params
       params.require(:reservation).permit(
-      :table_id,
-      :status,
-      :description
+     
     )
     end
 
