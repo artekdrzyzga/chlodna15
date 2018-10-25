@@ -5,7 +5,15 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :tables
-    resources :reservations
+    resources :reservations do 
+      member do
+      end
+      collection do
+        get :recived
+        get :accepted
+        get :finished
+      end  
+    end  
     root to: 'users#index'
   end
   

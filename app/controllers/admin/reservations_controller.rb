@@ -2,6 +2,17 @@ class Admin::ReservationsController < Admin::BaseController
   def index
     @reservations = Reservation.all
   end
+
+  def recived
+    @reservations = Reservation.where(status: "Nowa")
+    render action: "index"
+  end   
+
+  def accepted
+    @reservations = Reservation.where(status: "Przyjeta")
+    render action: "index"
+  end
+
   def edit
     @reservation = Reservation.find(params[:id])
   end
