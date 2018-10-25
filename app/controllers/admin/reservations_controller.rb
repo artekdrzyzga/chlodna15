@@ -13,6 +13,12 @@ class Admin::ReservationsController < Admin::BaseController
     render action: "index"
   end
 
+  def finished
+    @reservations = Reservation.where(status: "Zakonczona")
+    render action: "index"
+  end
+
+
   def edit
     @reservation = Reservation.find(params[:id])
   end

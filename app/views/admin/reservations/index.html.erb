@@ -4,6 +4,7 @@
   <li <% if params[:action] == "index" %> class="active" <%end%>> <%= link_to "Wszystkie", admin_reservations_path%> </li>
   <li<% if params[:action] == "recived" %> class="active" <%end%>> <%= link_to "Nowe", recived_admin_reservations_path%></li>
   <li<% if params[:action] == "accepted" %> class="active" <%end%>> <%= link_to "Przyjete", accepted_admin_reservations_path%></li>
+   <li<% if params[:action] == "finished" %> class="active" <%end%>> <%= link_to "Zakonczone", finished_admin_reservations_path%></li>
   
   
 </ul>
