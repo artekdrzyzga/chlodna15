@@ -1,21 +1,30 @@
 <h1>Reservations#new</h1>
 
-<%= simple_form_for  @reservation do |f| %>
-  <%= f.input :date %>
-  <%= f.input :seats %>
- 
-  
-
-  <%= f.submit class: "btn btn-success" %>
-<% end %>
+<%# <%= simple_form_for @reservation do |f| %>
+  <%#= f.input :date %>
+  <%#= f.input :seats %>
+  <%#= f.submit class: "btn btn-success" %>
+<%# end %>
 
 <%= form_for @reservation do |f| %>
   <div class="form-group date">
     <%= f.label :data %>
     <%= f.text_field :date, data: {provide: 'datepicker'} %>
 
+<<<<<<< HEAD
+<%= form_for @reservation do |f| %>
+  <div class="form-group date">
+    <%= f.label :data %>
+    <%= f.text_field :date, data: {provide: 'datepicker'} %>
+
+=======
+>>>>>>> 10652a42cf19e8b6e4c657bfb6effca0b5ab338e
     <%= f.label :seats %>
     <%= f.text_field :seats %>
   </div>
   <%= f.submit "Create Reservation", class: 'btn btn-success' %>
+<<<<<<< HEAD
 <% end %>
+=======
+<% end %>
+>>>>>>> 10652a42cf19e8b6e4c657bfb6effca0b5ab338e
