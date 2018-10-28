@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'jquery-rails'
+gem 'bootstrap-popover-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -74,3 +75,5 @@ gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 
 gem "rails-erd"
+
+gem 'ransack'

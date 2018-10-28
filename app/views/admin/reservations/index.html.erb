@@ -1,5 +1,15 @@
 <h1>Rezerwacje</h1>
 
+<% if params[:action] == "index" %>
+
+<%= search_form_for [:admin,@q] do |f| %>
+   <%= f.text_field :user_name_or_user_tel_cont, placeholder: "Szukaj urzytkownika"%>
+
+  <%= f.submit "Szukaj" %>
+<%end%>
+<%end%>
+
+<gb>
 <ul class="nav nav-tabs">
   <li <% if params[:action] == "index" %> class="active" <%end%>> <%= link_to "Wszystkie", admin_reservations_path%> </li>
   <li<% if params[:action] == "recived" %> class="active" <%end%>> <%= link_to "Nowe", recived_admin_reservations_path%></li>
@@ -14,6 +24,7 @@
     <tr>
       <th>Numer rezerwacji</th>
       <th> Klient</th>
+      <th>Telefon</th>
       <th>Data</th>
       <th>Ilosc gosci</th>
       <th>Stolik</th>
@@ -29,6 +40,7 @@
       <tr>
         <td><%= r.id %></td>
         <td><%= r.user.name%></td>
+        <td><%= r.user.tel %></td>
         <td><%= r.date %></td>
         <td><%= r.seats %></td>
         <td><%= r.table.name %></td>

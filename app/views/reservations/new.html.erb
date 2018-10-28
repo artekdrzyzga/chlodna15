@@ -9,3 +9,13 @@
   <%= f.submit class: "btn btn-success" %>
 <% end %>
 
+<%= form_for @reservation do |f| %>
+  <div class="form-group date">
+    <%= f.label :data %>
+    <%= f.text_field :date, data: {provide: 'datepicker'} %>
+
+    <%= f.label :seats %>
+    <%= f.text_field :seats %>
+  </div>
+  <%= f.submit "Create Reservation", class: 'btn btn-success' %>
+<% end %>

@@ -1,10 +1,12 @@
 class Admin::ReservationsController < Admin::BaseController
   def index
-    @reservations = Reservation.all
+    @q = Reservation.ransack(params[:q])
+    @reservations = @q.result(distinct: true)
   end
 
   def recived
     @reservations = Reservation.where(status: "Nowa")
+    
     render action: "index"
   end   
 
