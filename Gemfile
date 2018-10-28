@@ -30,10 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'jquery-rails'
-<<<<<<< HEAD
 gem 'bootstrap-popover-rails'
-=======
->>>>>>> 10652a42cf19e8b6e4c657bfb6effca0b5ab338e
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
