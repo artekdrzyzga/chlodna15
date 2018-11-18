@@ -19,7 +19,8 @@
 //= require bootstrap/bootstrap-rails-tooltip
 //= require bootstrap/bootstrap-rails-popover
 
-$('#sandbox-container div').datepicker({
-    keyboardNavigation: false,
-    forceParse: false
-});
+$.fn.datepicker.defaults.format = "dd-mm-yyyy";
+$.fn.datepicker.defaults.orientation = "bottom right";
+$.fn.datepicker.defaults.autoclose = "true";
+$.fn.datepicker.defaults.todayHighlight= "true";
+$.fn.datepicker.defaults.startDate = "today";

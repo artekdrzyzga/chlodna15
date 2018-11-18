@@ -1,19 +1,32 @@
-<h1>Reservations#new</h1>
 
-<%# <%= simple_form_for @reservation do |f| %>
-  <%#= f.input :date %>
-  <%#= f.input :seats %>
-  <%#= f.submit class: "btn btn-success" %>
-<%# end %>
+<div class="row">
+  <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+          <div class="panel-heading"><h6 class="text-center"><b>Nowa Rezerwacja</b></h6></div>
+          <div class="panel-body">
+            <%= form_for @reservation do |f| %>
+              <div class="form-group date">
+                <%= f.label :data %>
+                <%= f.text_field :date, data: {provide: 'datepicker'}, class:'form-control', autocomplete: 'off' %>
+                <%= f.label :time %>
+                <%= f.select :time, [['12:00'], ['12:15'], ['12:30'], ['12:45'], ['13:00'], ['13:15'], ['13:30']], {}, { :class => 'form-control' } %>
+                <%= f.label :seats %>
+                <%= f.text_field :seats, class:'form-control' %>
+                <%= f.label :userdescription %>
+                <%= f.text_area :userdescription, class: 'form-control'%>
+              </div>
+              <%= f.submit "Create Reservation", class: 'btn btn-success' %>
+            <% end %>
+          </div> 
+      </div>      
+    </div>
+  <div class="col-md-3"></div>
+</div>
 
 
-<%= form_for @reservation do |f| %>
-  <div class="form-group date">
-    <%= f.label :data %>
-    <%= f.text_field :date, data: {provide: 'datepicker'} %>
+      
 
-    <%= f.label :seats %>
-    <%= f.text_field :seats %>
-  </div>
-  <%= f.submit "Create Reservation", class: 'btn btn-success' %>
-<% end %>
+
+
+

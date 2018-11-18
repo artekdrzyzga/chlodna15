@@ -4,15 +4,15 @@
 <h2>Data: <%= @reservation.date%> </h2>
 <h2>Urzytkownik:<%=@reservation.user.name %></h2>
 
- 
- 
-  <%= simple_form_for [:admin, @reservation] do |f| %>
-    
-    <%= f.association :table, as: :select, prompt: nil %>
-    <%= f.input :status %>
-    <%= f.input :description %>
+<%= simple_form_for [:admin, @reservation] do |f| %>
+  <%= f.association :table, as: :select, prompt: nil %>
+  <%= f.input :status, priority: [ "Przyjeta" ], collection: [ "Przyjeta", "Zakonczona", "Nowa"] %>
+  <%= f.input :rstatus, priority: [ "Goscie w komplecie" ], collection: [ "Goscie w komplecie", "Niekompletny", "Niepotwiedzona", "Potwierdzona", "Spoznia", "Zly numer"]  %>
+  
+  <%= f.input :description %>
+  <%= f.input :userdescription%>
     <%= button_tag class: "btn btn-success btn-lg" do %>
       Zapisz i przejdź dalej
       <span class="fa fa-step-forward"></span>
     <% end %>
-  <% end %>
+<% end %>
