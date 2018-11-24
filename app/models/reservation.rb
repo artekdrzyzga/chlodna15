@@ -2,7 +2,7 @@ class Reservation < ApplicationRecord
     belongs_to :user
     belongs_to :table
 
-    #after_create :notify_admin
+    after_create :notify_admin
 
 
     def notify_admin
