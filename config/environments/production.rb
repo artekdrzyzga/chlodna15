@@ -96,14 +96,14 @@ Rails.application.configure do
    config.action_mailer.smtp_settings = {
      address: 'smtp.gmail.com',
      port: 587,
-     domain: 'YOUR_DOMAIN_GOES_HERE',
+     domain: 'gmail.com',
      user_name: 'artek.drzyzga@gmail.com',
      password: 'kalisia12a1',
      authentication: 'plain',
      enable_starttls_auto: true }
   
   
- 
+  config.action_mailer.default_url_options = { :host => 'infinite-inlet-24430.herokuapp.com' }
   
   
 end
