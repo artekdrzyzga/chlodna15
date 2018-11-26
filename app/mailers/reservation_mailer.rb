@@ -5,9 +5,14 @@ class ReservationMailer < ApplicationMailer
   #
   #   en.reservation_mailer.new_reservation_notification.subject
   #
-  def new_reservation_notification(reservation)
+  def new_reservation_notification(user,reservation)
     @reservation =  reservation
+    @user =user
 
-    mail to: "artek.drzyzga@gmail.com", subject: "Wow nowy post", from: 'artek.drzyzga@gmail.com'
+    mail to: @user.email, subject: "Nowa rezerwacja Chlodna 15", from: 'artek.drzyzga@gmail.com'
+
+             # tu musi byc curret user
+
+
   end
 end

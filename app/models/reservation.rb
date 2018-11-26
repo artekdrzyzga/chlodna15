@@ -6,7 +6,7 @@ class Reservation < ApplicationRecord
 
 
     def notify_admin
-      ReservationMailer.new_reservation_notification(self).deliver
+      ReservationMailer.new_reservation_notification(user, self).deliver
     end  
 
     def user_name
