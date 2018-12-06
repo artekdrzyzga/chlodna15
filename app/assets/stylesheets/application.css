@@ -16,7 +16,44 @@
  *= require bootstrap-datepicker
  
  */
- body { padding-top: 90px; } 
+ body {
+    padding-top: 90px;
+    background: url("/slide.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+ }
+ 
+ 
+ 
+  
+    input.transparent-input{
+       background-color:rgba(255,255,255, 0.2);
+       border:none ;
+    }
+
+   
 
 
+
+
+  form label{
+    color: #fff;
+  }
+
+ 
+ .panel-transparent {
+    background: none;
+    border-color: #ddd;
+}
+
+.panel-transparent .panel-heading{
+    background: rgba(122, 130, 136, 0.2)!important;
+}
+
+.panel-transparent .panel-body{
+    background: rgba(46, 51, 56, 0.2)!important;
+}
  

@@ -1,7 +1,10 @@
 class Reservation < ApplicationRecord
     belongs_to :user
     belongs_to :table
-
+    
+    validates :date, presence: true
+    validates :time, presence: true
+    validates :seats, presence: true
     after_create :notify_admin
 
 

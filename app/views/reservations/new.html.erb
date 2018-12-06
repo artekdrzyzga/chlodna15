@@ -6,14 +6,26 @@
           <div class="panel-heading"><h6 class="text-center"><b>Nowa Rezerwacja</b></h6></div>
           <div class="panel-body">
             <%= form_for @reservation do |f| %>
+
+               <% if @reservation.errors.any? %>
+                 <div id="error_explanation">
+                  <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this user from being saved:</h2>
+                  <ul>
+                    <% @reservation.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                 </div>
+               <% end %>
+
               <div class="form-group date">
                 <%= f.label :data %>
                 <%= f.text_field :date, data: {provide: 'datepicker'}, class:'form-control', autocomplete: 'off' %>
-                <%= f.label :time %>
+                <%= f.label :time, "Godzina" %>
                 <%= f.select :time, [['12:00'], ['12:15'], ['12:30'], ['12:45'], ['13:00'], ['13:15'], ['13:30']], {}, { :class => 'form-control' } %>
-                <%= f.label :seats %>
+                <%= f.label :seats, "Ilosc gosci" %>
                 <%= f.text_field :seats, class:'form-control' %>
-                <%= f.label :userdescription %>
+                <%= f.label :userdescription, "Dodatkowe informacje" %>
                 <%= f.text_area :userdescription, class: 'form-control'%>
               </div>
               <%= f.submit "Create Reservation", class: 'btn btn-success' %>

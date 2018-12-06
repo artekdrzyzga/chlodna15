@@ -4,14 +4,24 @@
 <h3>Pozdrawiamy,</h3>
 <h3>Zespół restauracji Chłodna 15 by Wilamowski.</h3>
 
-
-
 <p>
-  <strong> <%=  @user.email %> </strong>: <%= @reservation.status %>
+  <strong> Twoj numer rezerwacji </strong>: <%= @reservation.id %>
 </p>
 
-
-
 <p><%= link_to "www.chlodna15.pl", 'www.chlodna15.pl' %></p>
-<p><%= link_to "Facebook", 'https://www.facebook.com/Ch%C5%82odna-15-345229529234105/' %></p>
-<p><%= link_to "Instagram", 'https://www.instagram.com/lamaison_chlodna/' %></p>
+
+<%= link_to 'https://www.facebook.com/Ch%C5%82odna-15-345229529234105/'  do %>
+   <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/768px-F_icon.svg.png", size: "30x30" %>
+<% end %>
+
+<%= link_to 'https://www.instagram.com/lamaison_chlodna/'  do %>
+   <%= image_tag "https://cdn-images-1.medium.com/max/1600/1*V7GYJQ_4lykfDzOf9q17eA.jpeg", size: "30x30" %>
+<% end %>
+
+<%= link_to 'https://www.tripadvisor.co.uk/Restaurant_Review-g274856-d12909817-Reviews-Chlodna_15_by_Wilamowski-Warsaw_Mazovia_Province_Central_Poland.html'  do %>
+   <%= image_tag "https://seeklogo.com/images/T/tripadvisor-logo-E7BE3B9B79-seeklogo.com.png", size: "30x30" %>
+<% end %>
+
+
+
+
