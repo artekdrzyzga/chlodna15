@@ -1,13 +1,15 @@
-
+<div class="text-center">
+  <%= image_tag "chlodna-15-logo.png" %>
+</div>
 <div class="row">
-  <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <div class="panel panel-default">
-          <div class="panel-heading"><h6 class="text-center"><b>Nowa Rezerwacja</b></h6></div>
+  <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="panel panel-primary panel-transparent">
+        <div class="panel-heading"><h6 class="text-center"><b>Nowa rezerwacja</b></h6></div>
           <div class="panel-body">
+      
             <%= form_for @reservation do |f| %>
-
-               <% if @reservation.errors.any? %>
+              <% if @reservation.errors.any? %>
                  <div id="error_explanation">
                   <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this user from being saved:</h2>
                   <ul>
@@ -18,26 +20,65 @@
                  </div>
                <% end %>
 
-              <div class="form-group date">
+              <div class="form-group date post">
                 <%= f.label :data %>
-                <%= f.text_field :date, data: {provide: 'datepicker'}, class:'form-control', autocomplete: 'off' %>
+                <%= f.text_field :date, data: {provide: 'datepicker'}, class:'form-control transparent-input', autocomplete: 'off' %>
                 <%= f.label :time, "Godzina" %>
-                <%= f.select :time, [['12:00'], ['12:15'], ['12:30'], ['12:45'], ['13:00'], ['13:15'], ['13:30']], {}, { :class => 'form-control' } %>
+                <%= f.select :time, [['12:00'], ['12:15'], ['12:30'], ['12:45'], ['13:00'], ['13:15'], ['13:30']], {}, { :class => 'form-control select' } %>
                 <%= f.label :seats, "Ilosc gosci" %>
-                <%= f.text_field :seats, class:'form-control' %>
-                <%= f.label :userdescription, "Dodatkowe informacje" %>
-                <%= f.text_area :userdescription, class: 'form-control'%>
+                <%= f.text_field :seats, class:'form-control transparent-input', autocomplete: 'off' %>
+                <%= f.label :userdescription, "Dodatkowe informacje"  %>
+                <%= f.text_area :userdescription, class: 'form-control text-primary'%>
               </div>
-              <%= f.submit "Create Reservation", class: 'btn btn-success' %>
+              <%= f.submit "Zapisz rezerwacje", class: 'btn btn-secondary' %>
             <% end %>
-          </div> 
-      </div>      
+            
+          </div>
+        </div>    
+      </div>
     </div>
-  <div class="col-md-3"></div>
-</div>
+  </div> 
+</div>   
 
 
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

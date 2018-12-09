@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
-    def index
+  layout 'empty'
+  
+  def index
     end
 
 
